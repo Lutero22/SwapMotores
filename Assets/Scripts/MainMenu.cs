@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Juego cerrado");
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }
