@@ -10,14 +10,14 @@ public class AtrapadoPorEnemigo : MonoBehaviour
         if(other.CompareTag("Enemigo"))
         {
             Debug.Log("Jugador atrapado");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene("Derrota");
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
         }
         if (other.CompareTag("Salida"))
         {
             Debug.Log("Jugador Escapo");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Victoria");
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
         }
